@@ -1,0 +1,147 @@
+/*
+    Title: Assignment 3.3: Build a Web Page Exercise - Part 3 CSS
+    Author: Brittaney Perry-Morgan
+    Date: August 24, 2025
+    Description: CSS styling for Module 3 Assignment 3.3
+*/
+
+/* Overall page styling with complementary color scheme */
+body {
+    font-family: 'Crimson Text', 'Georgia', 'Times New Roman', serif;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    line-height: 1.7;
+    margin: 0;
+    padding: 20px;
+    font-weight: 400;
+}
+
+#container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(44, 62, 80, 0.08);
+}
+
+/* Center the h1 title */
+h1 {
+    text-align: center;
+    color: #c0392b;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+/* Set h3 weight to 500 */
+h3 {
+    font-weight: 500;
+    color: #8b0000;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-size: 1.4rem;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+}
+
+/* Set list weight to 300 */
+ol,
+ul {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+ol li,
+ul li {
+    margin-bottom: 12px;
+    color: #34495e;
+    font-size: 0.95rem;
+}
+
+/* Side-by-side container */
+.side-by-side {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Left and right divs with 45% width */
+.left-div,
+.right-div {
+    width: 45%;
+}
+
+/* Ordered list styling with solid red border */
+.left-div {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #fff5f5;
+}
+
+.left-div ol {
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+.left-div ol li {
+    margin-bottom: 12px;
+    color: #34495e;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Unordered list styling with dashed red border */
+.right-div {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #fff5f5;
+}
+
+.right-div ul {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+.right-div ul li {
+    margin-bottom: 12px;
+    color: #34495e;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Bottom div styling */
+.bottom-div {
+    width: 100%;
+    margin-top: 40px;
+    float: right;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+/* Link styling with complementary colors */
+a {
+    text-decoration: none;
+    color: #c0392b;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.01em;
+}
+
+/* Link hover effect */
+a:hover {
+    text-decoration: underline;
+    color: #8b0000;
+    transform: translateY(-1px);
+}
