@@ -50,15 +50,9 @@ TITLES (h3) to visually match list styles per assignment
 Left (ordered list column) = solid red border
 Right (unordered list column) = dashed red border
 ───────────────────────────────────────────────────────────── */
-.left-div h3 {
-    border: 1px solid red;
-    border-radius: 15px;
-    padding: 10px;
-    margin: 0 0 0.75rem 0;
-}
-
+.left-div h3,
 .right-div h3 {
-    border: 1px dashed red;
+    border: 1px solid red;
     border-radius: 15px;
     padding: 10px;
     margin: 0 0 0.75rem 0;
@@ -72,7 +66,8 @@ Requirements:
 - 10px padding
 - Numbers inside the border (list-style-position: inside)
 ───────────────────────────────────────────────────────────── */
-.left-div ol {
+
+.left-div {
     border: 1px solid red;
     border-radius: 15px;
     padding: 10px;
@@ -95,7 +90,7 @@ Requirements:
 - Change bullet points to upper-roman
 - Make markers inside the border (list-style-position: inside)
 ───────────────────────────────────────────────────────────── */
-.right-div ul {
+.right-div {
     border: 1px dashed red;
     border-radius: 15px;
     padding: 10px;
@@ -106,7 +101,7 @@ Requirements:
 }
 
 /* (DESIGN CHOICE) Adds space between li items */
-.right-div ul li {
+.right-div li {
     margin: 6px 0;
 }
 
