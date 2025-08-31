@@ -1,153 +1,158 @@
 /*
-    Title: Assignment 3.3: Build a Web Page Exercise - Part 3 CSS
-    Author: Brittaney Perry-Morgan
-    Date: August 24, 2025
-    Description: CSS styling for Module 3 Assignment 3.3
+Title: Assignment 3.3: Build a Web Page Exercise - Part 3
+Author: Brittaney Perry-Morgan
+Date: August 24, 2025
+Description: Comprehensive CSS for Module 3.3
 */
 
-/* Import Google Fonts for pairing with index.html */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Source+Serif+Pro:wght@300;400;500;600&display=swap');
+/* ─────────────────────────────────────────────────────────────
+IMPORTS
+Imports the base CSS from `site.css`
+───────────────────────────────────────────────────────────── */
+@import "../site.css";
 
-/* Overall page styling with complementary color scheme */
-body {
-    font-family: 'Source Serif Pro', 'Georgia', 'Times New Roman', serif;
-    font-size: 16px;
-    background-color: #f8f9fa;
-    color: #2c3e50;
-    line-height: 1.7;
-    margin: 0;
-    padding: 20px;
-    font-weight: 400;
+/* ─────────────────────────────────────────────────────────────
+GLOBAL STYLES
+───────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-#container {
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(44, 62, 80, 0.08);
-}
-
-/* Center the h1 title */
 h1 {
     text-align: center;
-    color: #c0392b;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    font-family: 'Oswald', 'Arial', sans-serif;
-    text-transform: uppercase;
+    /* Reinforce headline centering */
 }
 
-/* Set h3 weight to 500 */
-h3 {
-    font-weight: 500;
-    color: #8b0000;
-    margin-bottom: 20px;
-    margin-top: 0;
-    font-size: 1.4rem;
-    letter-spacing: -0.01em;
-    line-height: 1.3;
-    font-family: 'Oswald', 'Arial', sans-serif;
-}
-
-/* Set list weight to 300 */
-ol,
-ul {
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-ol li,
-ul li {
-    margin-bottom: 12px;
-    color: #34495e;
-    font-size: 0.95rem;
-}
-
-/* Side-by-side container */
+/* ─────────────────────────────────────────────────────────────
+LAYOUT: SIDE-BY-SIDE COLUMNS
+───────────────────────────────────────────────────────────── */
 .side-by-side {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 40px;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* Allows stacking on small screens */
+    margin-top: 1rem;
 }
 
-/* Left and right divs with 45% width */
 .left-div,
 .right-div {
     width: 45%;
+    min-width: 300px;
+    /* Keeps content readable on narrow widths */
 }
 
-/* Ordered list styling with solid red border */
-.left-div {
+/* ─────────────────────────────────────────────────────────────
+TITLES (h3) to visually match list styles per assignment
+Left (ordered list column) = solid red border
+Right (unordered list column) = dashed red border
+───────────────────────────────────────────────────────────── */
+.left-div h3 {
     border: 1px solid red;
     border-radius: 15px;
     padding: 10px;
-    background-color: #fff5f5;
+    margin: 0 0 0.75rem 0;
 }
 
-.left-div ol {
-    list-style-position: inside;
-    margin: 0;
-    padding: 0;
-}
-
-.left-div ol li {
-    margin-bottom: 12px;
-    color: #34495e;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-/* Unordered list styling with dashed red border */
-.right-div {
+.right-div h3 {
     border: 1px dashed red;
     border-radius: 15px;
     padding: 10px;
-    background-color: #fff5f5;
+    margin: 0 0 0.75rem 0;
 }
 
+/* ─────────────────────────────────────────────────────────────
+ORDERED LIST (Left Column)
+Requirements:
+- 1px solid red border
+- 15px border-radius
+- 10px padding
+- Numbers inside the border (list-style-position: inside)
+───────────────────────────────────────────────────────────── */
+.left-div ol {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style-position: inside;
+    margin: 0;
+    /* Tightens spacing under the h3 */
+}
+
+/* (DESIGN CHOICE) Adds space between li items */
+.left-div ol li {
+    margin: 6px 0;
+}
+
+/* ─────────────────────────────────────────────────────────────
+UNORDERED LIST (Right Column)
+Requirements:
+- 1px dashed red border
+- 15px border-radius
+- 10px padding
+- Change bullet points to upper-roman
+- Make markers inside the border (list-style-position: inside)
+───────────────────────────────────────────────────────────── */
 .right-div ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
     list-style-type: upper-roman;
     list-style-position: inside;
     margin: 0;
-    padding: 0;
+    /* Tightens spacing under the h3 */
 }
 
+/* (DESIGN CHOICE) Adds space between li items */
 .right-div ul li {
-    margin-bottom: 12px;
-    color: #34495e;
-    font-size: 0.95rem;
-    line-height: 1.5;
+    margin: 6px 0;
 }
 
-/* Bottom div styling */
-.bottom-div {
-    width: 100%;
-    margin-top: 40px;
-    float: right;
-    margin-bottom: 20px;
-    text-align: right;
-}
-
-/* Link styling with complementary colors */
-a {
-    text-decoration: none;
-    color: #c0392b;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    letter-spacing: 0.01em;
-}
-
-/* Link hover effect */
+/* ─────────────────────────────────────────────────────────────
+LINK BEHAVIOR
+Requirement: show underlines on hover
+(Visited styling can live in site.css; this keeps hover explicit)
+───────────────────────────────────────────────────────────── */
 a:hover {
     text-decoration: underline;
-    color: #8b0000;
-    transform: translateY(-1px);
+}
+
+/* ─────────────────────────────────────────────────────────────
+BOTTOM DIV
+Requirement: float right and margin-bottom: 20px
+───────────────────────────────────────────────────────────── */
+.bottom-div {
+    float: right;
+    margin-bottom: 20px;
+    margin-top: 1.25rem;
+}
+
+/* (DESIGN CHOICE) Ensures floated bottom link doesn’t collide with following content */
+.bottom-div a {
+    display: inline-block;
+    padding: 0.25rem 0;
+}
+
+/* (DESIGN CHOICE) Clear any floats after the section if needed */
+#container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ─────────────────────────────────────────────────────────────
+RESPONSIVE DESIGN
+───────────────────────────────────────────────────────────── */
+@media (max-width: 768px) and (min-width: 480px) {
+
+    div.left-div,
+    div.right-div {
+        width: 100%;
+    }
+
+    div.side-by-side {
+        flex-direction: column;
+    }
 }
