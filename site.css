@@ -1,60 +1,76 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+/* 
+Title: Module 3.3: Build a Web Page Exercise - Part 3
+Author: Brittaney Perry-Morgan
+Date: August 24, 2025
+Description: Module 3 Assignment 3.3 - Side-by-side divs with lists
 
-/* Container styling */
+Color Scheme
+Border: #d6a800
+Primary: #2e50a6
+Secondary: #f2d3b5
+Success: #17a599
+Danger: #a8488a
+Warning: #d1534f
+*/
+
+body {
+    font-family: "Proxima Nova Alt", sans-serif;
+    font-size: 1em;
+}
+
 #container {
     margin-top: 50px;
     margin-left: 100px;
     margin-right: 100px;
-    font-family: 'Oswald', Arial, sans-serif;
 }
 
-/* Heading styles with cohesive color scheme */
-h1, h2, h3, h4 {
-    background-color: #3F51B5;
-    color: #FFFFFF;
-    border: 1px solid #D6A800;
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Sentinel", sans-serif;
+    background-color: #d1534f;
+    color: #ffffff;
+    border: 1px solid #d6a800;
     padding: 10px;
-    font-family: 'Oswald', Arial, sans-serif;
+    border-radius: 5px;
 }
 
 h1 {
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
 h2 {
-    font-weight: 300;
+    font-weight: 500;
     text-align: left;
 }
 
 h3 {
-    font-weight: 300;
+    font-weight: 500;
     margin-top: 20px;
 }
 
 h4 {
-    font-weight: 300;
+    font-weight: 500;
     margin-top: 20px;
 }
 
-/* Anchor tag styling */
 a {
-    color: #3F51B5;
+    color: #2e50a6;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 a:hover {
-    color: #D6A800;
+    color: #17a599;
 }
 
 a:visited {
-    color: #1A237E;
+    color: #a8488a;
 }
 
-/* List styling */
 ul {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -64,8 +80,7 @@ li {
     margin-bottom: 5px;
 }
 
-/* Horizontal rule styling */
 hr {
-    border: 1px solid #D6A800;
+    border: 1px dashed #2e50a6;
     margin: 20px 0;
 }
