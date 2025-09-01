@@ -1,0 +1,74 @@
+/* 
+Title: Assignment 4.2: Build a Web Page Exercise - Part 4
+Author: Brittaney Perry-Morgan
+Date: August 31, 2025
+Description: Module 4 Assignment 4.2 - CSS Grid Image Gallery
+
+Imports site.css for base styling including:
+- Color scheme (Border: #d6a800, Primary: #2e50a6, etc.)
+- Typography (Proxima Nova Alt for body, Times New Roman for headings)
+- Container margins and basic layout
+- Heading styles with background colors and borders
+*/
+
+@import "../site.css";
+
+/* ─────────────────────────────────────────────────────────────
+GLOBAL STYLES
+───────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Image gallery container with CSS Grid - 3 equal columns */
+#image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 10%;
+    min-height: 30vh;
+}
+
+.book-img {
+    height: 20rem;
+    width: 15rem;
+}
+
+/* Reinforce h1 centering (site.css already centers h1) */
+h1 {
+    text-align: center;
+}
+
+/* Center h3 text - overrides site.css left alignment for gallery titles */
+h3 {
+    text-align: center;
+}
+
+/* Center images and remove default figure margins */
+figure {
+    text-align: center;
+    margin: 0;
+}
+
+/* Style figcaption with italic and smaller font size */
+figcaption {
+    font-style: italic;
+    font-size: .75em;
+    margin-top: 5px;
+    color: #2e50a687;
+}
+
+/* Bottom div positioning - matches Module 3.3 layout (not defined in site.css) */
+.bottom-div {
+    float: right;
+    margin-bottom: 20px;
+    margin-top: 1.25rem;
+}
+
+/* Ensure floated bottom link doesn't collide with following content */
+.bottom-div a {
+    display: inline-block;
+    padding: 0.25rem 0;
+}
