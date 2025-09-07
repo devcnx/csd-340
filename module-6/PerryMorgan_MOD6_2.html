@@ -13,16 +13,54 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="An introduction page for CSD340.">
+        <meta name="description" content="CSD340 Module 6.2: Reusable CSS - Top 5 Favorite Foods">
         <meta name="keywords" content="HTML, CSS, CSD340, Bellevue University">
         <meta name="author" content="Brittaney Perry-Morgan">
 
         <!-- Stylesheet -->
+        <link rel="stylesheet" href="PerryMorgan_MOD6_2.css">
     </head>
 
     <body>
-        <div class="bottom-div">
-            <a href="../index.html">Return to Landing Page</a>
+        <header role="banner">
+            <h1>Assignment 6.2: Build a Web Page - Part 5</h1>
+        </header>
+
+        <!-- Reusable Navbar (Styles Refactored to site.css) -->
+        <nav id="navbar" class="navbar" aria-label="Primary">
+            <a href="#" aria-current="page">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <main id="container">
+            <section class="card" aria-labelledby="foods-title">
+                <div class="card-title" id="foods-title">Top 5 Favorite Foods</div>
+                <div class="card-content">
+                    <ol>
+                        <li>
+                            Food Item #1 <a href="#" target="_blank" rel="noopener noreferrer">Link</a>
+                        </li>
+                        <li>
+                            Food Item #2 <a href="#" target="_blank" rel="noopener noreferrer">Link</a>
+                        </li>
+                        <li>
+                            Food Item #3 <a href="#" target="_blank" rel="noopener noreferrer">Link</a>
+                        </li>
+                        <li>
+                            Food Item #4 <a href="#" target="_blank" rel="noopener noreferrer">Link</a>
+                        </li>
+                        <li>
+                            Food Item #5 <a href="#" target="_blank" rel="noopener noreferrer">Link</a>
+                        </li>
+                    </ol>
+
+                    <!-- Light Date Stamp via document.write -->
+                    <p class="page-stamp" aria-libe="polite">
+                        <script>
+                            document.write("Last Updated: " + new Date().toLocaleDateString());
+                        </script>
+                    </p>
         </div>
     </body>
 

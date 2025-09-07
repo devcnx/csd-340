@@ -13,6 +13,80 @@ Danger: #a8488a
 Warning: #d1534f
 */
 
+/* ─────────────────────────────────────────────────────────────
+SHARED TOKENS (OPTIONAL, ADDITIVE)
+───────────────────────────────────────────────────────────── */
+
+:root {
+    --color-border: #d6a800;
+    --color-primary: #2e50a6;
+    --color-secondary: #f2d3b5;
+    --color-success: #17a599;
+    --color-danger: #a8488a;
+    --color-warning: #d1534f;
+    --color-white: #fff;
+}
+
+/* ─────────────────────────────────────────────────────────────
+NAVBAR (REUSABLE)
+───────────────────────────────────────────────────────────── */
+.navbar,
+#navbar {
+    overflow: hidden;
+    background-color: var(--color-primary, #2e50a6);
+}
+
+.navbar a,
+#navbar a {
+    float: left;
+    display: block;
+    color: var(--color-white, #fff);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a:hover,
+#navbar a:hover,
+.navbar a:focus-visible,
+#navbar a:focus-visible {
+    background-color: var(--color-white, #fff);
+    color: var(--color-primary, #2e50a6);
+    outline: 2px solid var(--color-primary, #2e50a6);
+    outline-offset: 2px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+CARD (REUSABLE)
+───────────────────────────────────────────────────────────── */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+    transition: 0.03s;
+    width: 50%;
+    background: var(--color-white, #fff);
+    border-radius: 6px;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    padding: 16px 16px 8px;
+    font-family: "Times New Roman", serif;
+    color: var(--color-primary, #235023);
+    font-weight: 400;
+}
+
+.card-content {
+    padding: 2px 16px;
+}
+
+
+
+
+/* ─────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────── */
+
 body {
     font-family: "Proxima Nova Alt", sans-serif;
     font-size: 1em;
@@ -86,4 +160,13 @@ li {
 hr {
     border: 1px dashed #2e50a6;
     margin: 20px 0;
+}
+
+/* ─────────────────────────────────────────────────────────────
+RESPONSIVE NICETY
+───────────────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+    .card {
+        width: 100%;
+    }
 }
