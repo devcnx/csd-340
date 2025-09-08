@@ -1,4 +1,4 @@
-/* 
+/*
 Title: Assignment 6.2: Build a Web Page Exercise - Part 5
 Author: Brittaney Perry-Morgan
 Date: Sunday, September 7th, 2025
@@ -8,5 +8,143 @@ Description: Module 6 Assignment 6.2 - Web Page Layouts
 @import "../site.css";
 
 /* ─────────────────────────────────────────────────────────────
-HEADER STYLES
+BASE STYLES FOR MODULE 6.2
 ───────────────────────────────────────────────────────────── */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Times New Roman", Times, serif;
+    background-color: var(--color-warning);
+    color: var(--color-white);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-align: left;
+}
+
+h3,
+h4 {
+    margin-top: 20px;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--color-success);
+}
+
+a:visited {
+    color: var(--color-danger);
+}
+
+header {
+    background-color: var(--color-warning);
+    color: var(--color-white);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-weight: 400;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: var(--color-warning);
+    border-bottom: 15px solid var(--color-success);
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: var(--color-white);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    background-color: var(--color-success);
+    color: var(--color-white);
+}
+
+#navbar a:visited {
+    color: var(--color-muted);
+}
+
+#container {
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 50%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2em;
+    color: var(--color-primary);
+    font-weight: 400;
+}
+
+.card-content {
+    padding: 2px 16px;
+}
+
+footer {
+    background-color: var(--color-warning);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    text-align: center;
+    color: var(--color-white);
+    font-weight: 400;
+    font-style: italic;
+    float: right;
+    padding-right: 10px;
+}
+
+
+footer a {
+    color: var(--color-white);
+    font-weight: 400;
+    font-style: italic;
+    float: right;
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--color-white);
+}
+
+footer a:visited {
+    color: var(--color-white)
+}

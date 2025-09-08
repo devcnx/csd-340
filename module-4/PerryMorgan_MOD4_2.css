@@ -1,14 +1,8 @@
-/* 
+/*
 Title: Assignment 4.2: Build a Web Page Exercise - Part 4
 Author: Brittaney Perry-Morgan
 Date: August 31, 2025
 Description: Module 4 Assignment 4.2 - CSS Grid Image Gallery
-
-Imports site.css for base styling including:
-- Color scheme (Border: #d6a800, Primary: #2e50a6, etc.)
-- Typography (Proxima Nova Alt for body, Times New Roman for headings)
-- Container margins and basic layout
-- Heading styles with background colors and borders
 */
 
 @import "../site.css";
@@ -22,7 +16,66 @@ GLOBAL STYLES
     box-sizing: border-box;
 }
 
-/* Image gallery container with CSS Grid - 3 equal columns */
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Times New Roman", Times, serif;
+    background-color: var(--color-warning);
+    color: var(--color-white);
+    border: 1px solid var(--color-border);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-align: left;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h4 {
+    margin-top: 20px;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--color-success);
+}
+
+a:visited {
+    color: var(--color-danger);
+}
+
+.bottom-div {
+    float: right;
+    margin-bottom: 20px;
+    margin-top: 1.25rem;
+}
+
+.bottom-div a {
+    display: inline-block;
+    padding: 0.25rem 0;
+}
+
+/* ─────────────────────────────────────────────────────────────
+IMAGE GALLERY
+───────────────────────────────────────────────────────────── */
+
 #image-gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -36,39 +89,14 @@ GLOBAL STYLES
     width: 15rem;
 }
 
-/* Reinforce h1 centering (site.css already centers h1) */
-h1 {
-    text-align: center;
-}
-
-/* Center h3 text - overrides site.css left alignment for gallery titles */
-h3 {
-    text-align: center;
-}
-
-/* Center images and remove default figure margins */
 figure {
     text-align: center;
     margin: 0;
 }
 
-/* Style figcaption with italic and smaller font size */
 figcaption {
     font-style: italic;
     font-size: .75em;
     margin-top: 5px;
     color: #2e50a687;
-}
-
-/* Bottom div positioning - matches Module 3.3 layout (not defined in site.css) */
-.bottom-div {
-    float: right;
-    margin-bottom: 20px;
-    margin-top: 1.25rem;
-}
-
-/* Ensure floated bottom link doesn't collide with following content */
-.bottom-div a {
-    display: inline-block;
-    padding: 0.25rem 0;
 }

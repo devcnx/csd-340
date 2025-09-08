@@ -5,10 +5,6 @@ Date: August 24, 2025
 Description: Comprehensive CSS for Module 3.3
 */
 
-/* ─────────────────────────────────────────────────────────────
-IMPORTS
-Imports the base CSS from `site.css`
-───────────────────────────────────────────────────────────── */
 @import "../site.css";
 
 /* ─────────────────────────────────────────────────────────────
@@ -20,9 +16,57 @@ GLOBAL STYLES
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Times New Roman", Times, serif;
+    background-color: var(--color-warning);
+    color: var(--color-white);
+    border: 1px solid var(--color-border);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
 h1 {
     text-align: center;
-    /* Reinforce headline centering */
+    text-transform: uppercase;
+}
+
+h2 {
+    text-align: left;
+}
+
+h3,
+h4 {
+    margin-top: 20px;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--color-success);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--color-danger);
+}
+
+.bottom-div {
+    float: right;
+    margin-bottom: 20px;
+    margin-top: 1.25rem;
+}
+
+.bottom-div a {
+    display: inline-block;
+    padding: 0.25rem 0;
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -34,7 +78,6 @@ LAYOUT: SIDE-BY-SIDE COLUMNS
     align-items: flex-start;
     gap: 2rem;
     flex-wrap: wrap;
-    /* Allows stacking on small screens */
     margin-top: 1rem;
 }
 
@@ -42,13 +85,10 @@ LAYOUT: SIDE-BY-SIDE COLUMNS
 .right-div {
     width: 45%;
     min-width: 300px;
-    /* Keeps content readable on narrow widths */
 }
 
 /* ─────────────────────────────────────────────────────────────
-TITLES (h3) to visually match list styles per assignment
-Left (ordered list column) = solid red border
-Right (unordered list column) = dashed red border
+TITLES & LISTS
 ───────────────────────────────────────────────────────────── */
 .left-div h3,
 .right-div h3 {
@@ -58,38 +98,18 @@ Right (unordered list column) = dashed red border
     margin: 0 0 0.75rem 0;
 }
 
-/* ─────────────────────────────────────────────────────────────
-ORDERED LIST (Left Column)
-Requirements:
-- 1px solid red border
-- 15px border-radius
-- 10px padding
-- Numbers inside the border (list-style-position: inside)
-───────────────────────────────────────────────────────────── */
-
 .left-div {
     border: 1px solid red;
     border-radius: 15px;
     padding: 10px;
     list-style-position: inside;
     margin: 0;
-    /* Tightens spacing under the h3 */
 }
 
-/* (DESIGN CHOICE) Adds space between li items */
 .left-div ol li {
     margin: 6px 0;
 }
 
-/* ─────────────────────────────────────────────────────────────
-UNORDERED LIST (Right Column)
-Requirements:
-- 1px dashed red border
-- 15px border-radius
-- 10px padding
-- Change bullet points to upper-roman
-- Make markers inside the border (list-style-position: inside)
-───────────────────────────────────────────────────────────── */
 .right-div {
     border: 1px dashed red;
     border-radius: 15px;
@@ -97,44 +117,10 @@ Requirements:
     list-style-type: upper-roman;
     list-style-position: inside;
     margin: 0;
-    /* Tightens spacing under the h3 */
 }
 
-/* (DESIGN CHOICE) Adds space between li items */
 .right-div li {
     margin: 6px 0;
-}
-
-/* ─────────────────────────────────────────────────────────────
-LINK BEHAVIOR
-Requirement: show underlines on hover
-(Visited styling can live in site.css; this keeps hover explicit)
-───────────────────────────────────────────────────────────── */
-a:hover {
-    text-decoration: underline;
-}
-
-/* ─────────────────────────────────────────────────────────────
-BOTTOM DIV
-Requirement: float right and margin-bottom: 20px
-───────────────────────────────────────────────────────────── */
-.bottom-div {
-    float: right;
-    margin-bottom: 20px;
-    margin-top: 1.25rem;
-}
-
-/* (DESIGN CHOICE) Ensures floated bottom link doesn’t collide with following content */
-.bottom-div a {
-    display: inline-block;
-    padding: 0.25rem 0;
-}
-
-/* (DESIGN CHOICE) Clear any floats after the section if needed */
-#container::after {
-    content: "";
-    display: block;
-    clear: both;
 }
 
 /* ─────────────────────────────────────────────────────────────

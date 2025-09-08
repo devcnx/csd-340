@@ -13,10 +13,6 @@ Danger: #a8488a
 Warning: #d1534f
 */
 
-/* ─────────────────────────────────────────────────────────────
-SHARED TOKENS (OPTIONAL, ADDITIVE)
-───────────────────────────────────────────────────────────── */
-
 :root {
     --color-border: #d6a800;
     --color-primary: #2e50a6;
@@ -27,9 +23,17 @@ SHARED TOKENS (OPTIONAL, ADDITIVE)
     --color-white: #fff;
 }
 
-/* ─────────────────────────────────────────────────────────────
-NAVBAR (REUSABLE)
-───────────────────────────────────────────────────────────── */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Proxima Nova Alt", sans-serif;
+    font-size: 1em;
+}
+
 .navbar,
 #navbar {
     overflow: hidden;
@@ -57,9 +61,6 @@ NAVBAR (REUSABLE)
     outline-offset: 2px;
 }
 
-/* ─────────────────────────────────────────────────────────────
-CARD (REUSABLE)
-───────────────────────────────────────────────────────────── */
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
     transition: 0.03s;
@@ -81,17 +82,6 @@ CARD (REUSABLE)
     padding: 2px 16px;
 }
 
-
-
-
-/* ─────────────────────────────────────────────────────────────
-───────────────────────────────────────────────────────────── */
-
-body {
-    font-family: "Proxima Nova Alt", sans-serif;
-    font-size: 1em;
-}
-
 #container {
     margin-top: 50px;
     margin-left: 100px;
@@ -105,7 +95,6 @@ h4 {
     font-family: "Times New Roman", serif;
     background-color: #d1534f;
     color: #ffffff;
-    border: 1px solid #d6a800;
     padding: 10px;
     border-radius: 5px;
 }
@@ -162,9 +151,6 @@ hr {
     margin: 20px 0;
 }
 
-/* ─────────────────────────────────────────────────────────────
-RESPONSIVE NICETY
-───────────────────────────────────────────────────────────── */
 @media (max-width: 720px) {
     .card {
         width: 100%;
